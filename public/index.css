@@ -1,0 +1,26 @@
+#leftanim {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateX(-100%);
+  animation: moveleft 1.1s linear forwards;
+}
+@keyframes moveleft {
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0%);
+  }
+}
+#rightanim {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateX(100%);
+  animation: moveright 1s linear forwards;
+}
+@keyframes moveright {
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0%);
+  }
+}
