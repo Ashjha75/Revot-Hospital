@@ -1,4 +1,9 @@
-#leftanim {
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/* #leftanim {
   opacity: 0;
   filter: blur(2px);
   transform: translateX(-100%);
@@ -22,5 +27,36 @@
     opacity: 1;
     filter: blur(0px);
     transform: translateX(0%);
+  }
+} */
+#hello:hover {
+  background: #4c647311;
+}
+#hello:hover > #hhh {
+  opacity: 1;
+}
+
+#Drotaion1,
+#Drotaion2,
+#Drotaion3,
+#Drotaion4,
+#Drotaion5,
+#Drotaion6,
+#Drotaion7,
+#Drotaion8 {
+  animation: anim 25s linear infinite;
+}
+@keyframes anim {
+  0% {
+    transform: translateX(100%);
+    /* -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible; */
+  }
+
+  100% {
+    transform: translateX(-445%);
+    /* -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); */
   }
 }
