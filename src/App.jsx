@@ -5,22 +5,20 @@ import Header from "./Components/Header.jsx";
 import Footer from "./Components/Footer.jsx";
 import Authentication from "./Components/Authentication.jsx";
 import Home from "./Components/Home.jsx";
+import Menu from "./Components/Menu.jsx";
+import EditProfile from "./Components/EditProfile.jsx";
 
 const App = () => {
-  const dataShow = (e) => {
-    const data = document.getElementById("authContaent");
-    data.style.display = "flex";
-  };
   return (
     <Router>
-      <Header onClick={dataShow} />
+      <Header />
       {/* <Loader2 /> */}
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/e" element={<Authentication onClick={dataShow} />} />
-        <Route />
-        <Route />
+        <Route path="/e" element={<Authentication />} />
+        <Route path="/Menu" element={<Menu />} />
+        <Route path="/EditProfile" element={<EditProfile />} />
         <Route />
       </Routes>
       <Footer />

@@ -3,19 +3,20 @@ import React, { useState } from "react";
 const Signup = () => {
   const [showpass, setShowpass] = useState("password");
   const [inputs, setInputs] = useState({
-    Username: "",
-    Password: "",
+    username: "",
+    email: "",
+    password: "",
+    cpassword: "",
   });
   const handleInputs = (e) => {
-    // const name = e.target.name;
+    const name = e.target.name;
     const value = e.target.value;
-    // console.log(...inputs);
-    setInputs(value);
+    setInputs({ ...inputs, [name]: value });
   };
 
   const handlePass = (e) => {
     const tagValue = document.getElementById("show");
-    console.log(tagValue.type);
+
     if (tagValue.type === "password") {
       setShowpass("text");
     } else {
@@ -34,7 +35,7 @@ const Signup = () => {
           </label>
 
           <input
-            value={inputs.Username}
+            value={inputs.username}
             type="text"
             name="username"
             className="py-2 pl-5 w-60 rounded-lg border-2 outline-blue-600  valid:text-slate-700 invalid:text-red-600 bg-white
@@ -51,9 +52,9 @@ const Signup = () => {
           </label>
 
           <input
-            value={inputs.Username}
+            value={inputs.email}
             type="email"
-            name="username"
+            name="email"
             className="py-2 pl-5 w-60 rounded-lg border-2 outline-blue-600  valid:text-slate-700 invalid:text-red-600 bg-white
             "
             placeholder="email here...."
@@ -67,7 +68,7 @@ const Signup = () => {
             Password*
           </label>
           <input
-            value={inputs.Password}
+            value={inputs.password}
             type={showpass}
             name="password"
             className="py-2 pl-5 w-60 rounded-lg border-2 outline-blue-600  valid:text-blue-700-700 invalid:text-red-600 
@@ -84,12 +85,12 @@ const Signup = () => {
             Confirm Password*
           </label>
           <input
-            value={inputs.Password}
+            value={inputs.cpassword}
             type={showpass}
-            name="password"
+            name="capassword"
             className="py-2 pl-5 w-60 rounded-lg border-2 outline-blue-600  valid:text-slate-700 invalid:text-red-600 
             "
-            id="show"
+            id="show2"
             placeholder="confirm password..."
             onChange={handleInputs}
             required

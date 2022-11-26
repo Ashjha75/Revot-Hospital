@@ -4,14 +4,14 @@ import { FaUser } from "react-icons/fa";
 const Login = () => {
   const [showpass, setShowpass] = useState("password");
   const [inputs, setInputs] = useState({
-    Username: "",
-    Password: "",
+    username: "",
+    password: "",
   });
   const handleInputs = (e) => {
     // const name = e.target.name;
     const value = e.target.value;
     // console.log(...inputs);
-    setInputs(value);
+    setInputs({ ...inputs, [e.target.name]: value });
   };
 
   const handlePass = (e) => {

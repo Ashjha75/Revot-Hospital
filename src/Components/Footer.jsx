@@ -9,8 +9,8 @@ import { IoLogoBuffer } from "react-icons/io";
 const Footer = () => {
   let date = new Date().getFullYear();
   return (
-    <main className=" bg-slate-900 text-white  w-[100%] ">
-      <section className="flex flex-col   justify-around mt-5 py-12 md:flex-row">
+    <main className=" bg-slate-900 text-white  w-[100%] relative bottom-0">
+      <section className="flex flex-col   justify-around pt-5 py-12 md:flex-row">
         <div className="border-l-4 h-fit pl-4 my-7 md:mt-2 ml-6 md:ml-1 border-[#f8f8f8] hover:border-yellow-400">
           <ul>
             <h3 className=" text-xl font-bold mb-3 hover:text-yellow-300 cursor-pointer hover:underline">

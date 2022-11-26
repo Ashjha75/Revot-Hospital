@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaUserAlt, FaEnvelope } from "react-icons/fa";
-import axios from "axios";
+// import axios from "axios";
 
 const Contact = () => {
   const [names, setNames] = useState("");
