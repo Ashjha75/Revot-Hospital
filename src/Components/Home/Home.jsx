@@ -1,34 +1,33 @@
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Contact from "../Components/Contact.jsx";
+import Contact from "../Home/Contact.jsx";
 // ------------------------------------Images----------------------------------------------
-import Mainimg from "../Assets/Contraception methods.gif";
-import Mainimg2 from "../Assets/doctor-consult-illustration (1).svg";
-import Heart from "../Assets/adult-cardiac-surgery.png";
-import Bones from "../Assets/orthopaedic-services.png";
-import Marrow from "../Assets/bone-marrow-transplant_0.png";
-import Kidney from "../Assets/adult-kidney-transplant.png";
-import Cardio from "../Assets/cardiology-adult.png";
-import Critical from "../Assets/critical-care-services.png";
-import Liver from "../Assets/liver-transplant-surgery.png";
-import Cardia from "../Assets/cardia.svg";
-import Orthopaedics from "../Assets/Orthopaedics.svg";
-import Cancer from "../Assets/cancer care oncology.svg";
-import Neuro from "../Assets/Neurosciences.svg";
-import Thoracic from "../Assets/Thoracic Surgery.svg";
-import Gas from "../Assets/Gastroenterology.svg";
-import BoneMarrow from "../Assets/Bone Marrow Transplant .svg";
+import Mainimg from "../../Assets/Contraception methods.gif";
+import Mainimg2 from "../../Assets/doctor-consult-illustration (1).svg";
+import Heart from "../../Assets/adult-cardiac-surgery.png";
+import Bones from "../../Assets/orthopaedic-services.png";
+import Marrow from "../../Assets/bone-marrow-transplant_0.png";
+import Kidney from "../../Assets/adult-kidney-transplant.png";
+import Cardio from "../../Assets/cardiology-adult.png";
+import Critical from "../../Assets/critical-care-services.png";
+import Liver from "../../Assets/liver-transplant-surgery.png";
+import Cardia from "../../Assets/cardia.svg";
+import Orthopaedics from "../../Assets/Orthopaedics.svg";
+import Cancer from "../../Assets/cancer care oncology.svg";
+import Neuro from "../../Assets/Neurosciences.svg";
+import Thoracic from "../../Assets/Thoracic Surgery.svg";
+import Gas from "../../Assets/Gastroenterology.svg";
+import BoneMarrow from "../../Assets/Bone Marrow Transplant .svg";
 // +++++++++++++++++++++++++DOCTORS IMG+++++++++++++++++++++++++++++++++++++
-
-import DR1 from "../Assets/240_F_172186647_e93OQdc8KSoBzIPqfKG0UoJSJhR15HLa-min.jpg";
-import DR2 from "../Assets/dr2.jpg";
-import DR3 from "../Assets/240_F_282721311_yyx96CWXbXsy2XVOFAjZ6jFm8vZrZKjO-min.jpg";
-import DR4 from "../Assets/240_F_291430206_U1vohsIJWJvF3wb1a3uxfYLPCfXMRbum-min.jpg";
-import DR5 from "../Assets/240_F_316428808_Tf4dch8C6t2mciunZDlbCi0qVmdGbxqv-min.jpg";
-import DR6 from "../Assets/240_F_307163137_zZzqR0NLT5M1w7E4CNrAQEo2gnIYYcAN-min.jpg";
-import DR7 from "../Assets/240_F_320523164_tx7Rdd7I2XDTvvKfz2oRuRpKOPE5z0ni-min.jpg";
-import DR8 from "../Assets/240_F_328759383_QFBykomIcL0ajmj56hIg3my4ful6JooZ-min.jpg";
+import DR1 from "../../Assets/240_F_172186647_e93OQdc8KSoBzIPqfKG0UoJSJhR15HLa-min.jpg";
+import DR2 from "../../Assets/dr2.jpg";
+import DR3 from "../../Assets/240_F_282721311_yyx96CWXbXsy2XVOFAjZ6jFm8vZrZKjO-min.jpg";
+import DR4 from "../../Assets/240_F_291430206_U1vohsIJWJvF3wb1a3uxfYLPCfXMRbum-min.jpg";
+import DR5 from "../../Assets/240_F_316428808_Tf4dch8C6t2mciunZDlbCi0qVmdGbxqv-min.jpg";
+import DR6 from "../../Assets/240_F_307163137_zZzqR0NLT5M1w7E4CNrAQEo2gnIYYcAN-min.jpg";
+import DR7 from "../../Assets/240_F_320523164_tx7Rdd7I2XDTvvKfz2oRuRpKOPE5z0ni-min.jpg";
+import DR8 from "../../Assets/240_F_328759383_QFBykomIcL0ajmj56hIg3my4ful6JooZ-min.jpg";
 // -----------------------------------Icons------------------------------------------------
 import {
   FaLocationArrow,
@@ -345,32 +344,32 @@ const Home = () => {
       <div className="bg-[#ebf2fa] flex flex-col md:flex-row  justify-around py-12">
         <div className="w-[35rem] ">
           <div className="w-fit flex gap-2 justify-center items-center hover:bg-[#b0dae4bd] px-8 py-4 rounded-xl shadow-gray-800 hover:shadow-xl ml-4">
-            <img src={Cardia} alt="" className="w-16 " />
+            <img src={Cardia} alt="img" className="w-16 " />
             <p className=" text-sm md:text-lg font-semibold text-[#265587] hover:underline hover:text-white">
               Cardiac Science
             </p>
           </div>
 
           <div className="w-fit flex gap-2 justify-center items-center hover:bg-[#b0dae4bd] px-8 py-4 rounded-xl shadow-gray-800 hover:shadow-xl ml-4">
-            <img src={Orthopaedics} alt="" className="w-16 " />
+            <img src={Orthopaedics} alt="img" className="w-16 " />
             <p className="text-sm md:text-lg  font-semibold text-[#004084] hover:underline hover:text-white">
               Orthopaedics & <br /> Joints Replacements
             </p>
           </div>
           <div className="w-fit flex gap-2 justify-center items-center hover:bg-[#b0dae4bd] px-8 py-4 rounded-xl shadow-gray-800 hover:shadow-xl ml-4">
-            <img src={Neuro} alt="" className="w-16 " />
+            <img src={Neuro} alt="img" className="w-16 " />
             <p className="text-sm md:text-lg  font-semibold text-[#004084] hover:underline hover:text-white">
               Neuroscience
             </p>
           </div>
           <div className="w-fit flex gap-2 justify-center items-center hover:bg-[#b0dae4bd] px-8 py-4 rounded-xl shadow-gray-800 hover:shadow-xl ml-4">
-            <img src={Cancer} alt="" className="w-12 " />
+            <img src={Cancer} alt="img" className="w-12 " />
             <p className="text-sm  md:text-lg font-semibold text-[#004084] hover:underline hover:text-white">
               Cancer Care/Oncology
             </p>
           </div>
           <div className="w-fit flex gap-2 justify-center items-center hover:bg-[#b0dae4bd] px-8 py-4 rounded-xl shadow-gray-800 hover:shadow-xl ml-4">
-            <img src={BoneMarrow} alt="" className="w-16 " />
+            <img src={BoneMarrow} alt="img" className="w-16 " />
             <p className="text-sm md:text-lg  font-semibold text-[#004084] hover:underline hover:text-white">
               Bone Marrow Transplant
             </p>
@@ -378,13 +377,13 @@ const Home = () => {
           {list ? (
             <div className="">
               <div className="w-fit flex gap-2 justify-center items-center hover:bg-[#b0dae4bd] px-8 py-4 rounded-xl shadow-gray-800 hover:shadow-xl ml-4">
-                <img src={Thoracic} alt="" className="w-16 " />
+                <img src={Thoracic} alt="img" className="w-16 " />
                 <p className="text-sm md:text-lg  font-semibold text-[#004084] hover:underline hover:text-white">
                   Thoracic Surgery
                 </p>
               </div>
               <div className="w-fit flex gap-2 justify-center items-center hover:bg-[#b0dae4bd] px-8 py-4 rounded-xl shadow-gray-800 hover:shadow-xl ml-4 ">
-                <img src={Gas} alt="" className="w-16 " />
+                <img src={Gas} alt="img" className="w-16 " />
                 <p className="text-sm md:text-lg  font-semibold text-[#004084] hover:underline hover:text-white">
                   Gastroenterology
                 </p>
@@ -410,7 +409,7 @@ const Home = () => {
           className="m-4 bg-[#f8f8f8]  w-[20rem] h-[20.5rem] rounded-lg border-4  border-[#c7dfe6f1] flex flex-col  items-center hover:shadow-2xl  "
           id="Drotaion1"
         >
-          <img src={DR1} alt="" className="mt-0 h-[75%]" />
+          <img src={DR1} alt="img" className="mt-0 h-[75%]" />
           <h3 className="text-[#0f1551] text-2xl font-semibold">
             Dr. Juille ves
           </h3>
@@ -421,7 +420,7 @@ const Home = () => {
           className="m-4 bg-[#f8f8f8]  w-[20rem] h-[20.5rem] rounded-lg border-4  border-[#c7dfe6f1] flex flex-col  items-center hover:shadow-2xl  "
           id="Drotaion2"
         >
-          <img src={DR2} alt="" className="mt-0 h-[75%]" />
+          <img src={DR2} alt="img" className="mt-0 h-[75%]" />
           <h3 className="text-[#0f1551] text-2xl font-semibold">
             Dr. Rougee dax
           </h3>
@@ -434,7 +433,7 @@ const Home = () => {
           className="m-4 bg-[#f8f8f8]  w-[20rem] h-[20.5rem] rounded-lg border-4  border-[#c7dfe6f1] flex flex-col  items-center hover:shadow-2xl  "
           id="Drotaion3"
         >
-          <img src={DR3} alt="" className="mt-0 h-[75%]" />
+          <img src={DR3} alt="img" className="mt-0 h-[75%]" />
           <h3 className="text-[#0f1551] text-2xl font-semibold">
             Dr. Rafle yuv
           </h3>
@@ -445,7 +444,7 @@ const Home = () => {
           className="m-4 bg-[#f8f8f8]  w-[20rem] h-[20.5rem] rounded-lg border-4  border-[#c7dfe6f1] flex flex-col  items-center hover:shadow-2xl  "
           id="Drotaion4"
         >
-          <img src={DR4} alt="" className="mt-0 h-[75%]" />
+          <img src={DR4} alt="img" className="mt-0 h-[75%]" />
           <h3 className="text-[#0f1551] text-2xl font-semibold">Dr. Yuliie</h3>
           <h5 className="text-[#446477] font-semibold">-MBBS</h5>
           <p className="mb-3 text-[#0f1551]">14 Yrs Experience</p>
@@ -454,7 +453,7 @@ const Home = () => {
           className="m-4 bg-[#f8f8f8]  w-[20rem] h-[20.5rem] rounded-lg border-4  border-[#c7dfe6f1] flex flex-col  items-center hover:shadow-2xl  "
           id="Drotaion5"
         >
-          <img src={DR5} alt="" className="mt-0 h-[75%]" />
+          <img src={DR5} alt="img" className="mt-0 h-[75%]" />
           <h3 className="text-[#0f1551] text-2xl font-semibold">
             Dr. Rdell NS
           </h3>
@@ -465,7 +464,7 @@ const Home = () => {
           className="m-4 bg-[#f8f8f8]  w-[20rem] h-[20.5rem] rounded-lg border-4  border-[#c7dfe6f1] flex flex-col  items-center hover:shadow-2xl  "
           id="Drotaion6"
         >
-          <img src={DR6} alt="" className="mt-0 h-[75%]" />
+          <img src={DR6} alt="img" className="mt-0 h-[75%]" />
           <h3 className="text-[#0f1551] text-2xl font-semibold">
             Dr. Janiie jay
           </h3>
@@ -478,7 +477,7 @@ const Home = () => {
           className="m-4 bg-[#f8f8f8]  w-[20rem] h-[20.5rem] rounded-lg border-4  border-[#c7dfe6f1] flex flex-col  items-center hover:shadow-2xl  "
           id="Drotaion7"
         >
-          <img src={DR7} alt="" className="mt-0 h-[75%]" />
+          <img src={DR7} alt="img" className="mt-0 h-[75%]" />
           <h3 className="text-[#0f1551] text-2xl font-semibold">
             Dr Yavi kapoor
           </h3>
@@ -491,7 +490,7 @@ const Home = () => {
           className="m-4 bg-[#f8f8f8]  w-[20rem] h-[20.5rem] rounded-lg border-4  border-[#c7dfe6f1] flex flex-col  items-center hover:shadow-2xl  "
           id="Drotaion8"
         >
-          <img src={DR8} alt="" className="mt-0 h-[75%]" />
+          <img src={DR8} alt="img" className="mt-0 h-[75%]" />
           <h3 className="text-[#0f1551] text-2xl font-semibold">
             {" "}
             Dr. Sam curan

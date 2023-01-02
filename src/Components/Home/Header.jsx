@@ -1,30 +1,31 @@
 import React, { useEffect, useState } from "react";
+import { FaBellSlash, FaBell } from "react-icons/fa";
 import Aos from "aos";
 import { Link } from "react-router-dom";
 
 // ==================================================Images======================================================
-import Doctor from "../Assets/icon-doctors.svg";
-import Reports from "../Assets/icon-reports.svg";
-import Appoint from "../Assets/icon-appointment.svg";
-import SOS from "../Assets/sos-icon.svg";
-import Phone from "../Assets/icon-phone-dark.svg";
+import Doctor from "../../Assets/icon-doctors.svg";
+import Reports from "../../Assets/icon-reports.svg";
+import Appoint from "../../Assets/icon-appointment.svg";
+import SOS from "../../Assets/sos-icon.svg";
+import Phone from "../../Assets/icon-phone-dark.svg";
 // -----------------------------------------------------icons==========
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdPersonAdd, IoLogoBuffer } from "react-icons/io";
-import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 // ===================================================Components----------------
-import Auth from "../Components/Authentication.jsx";
-import SearchBox from "../Components/SearchBox.jsx";
+import Auth from "../Home/Authentication.jsx";
+import SearchBox from "../Home/SearchBox.jsx";
+import ApponmentBell from "../Appoinment/ApponmentBell.jsx";
 
 const Header = (props) => {
-  const [themes, setThemes] = useState(true);
-  const handleTheme = (e) => {
-    setThemes(themes ? false : true);
-  };
-
   const [show, setShow] = useState(false);
+  const [bell, setBell] = useState(true);
+
   const dataShow = (e) => {
     setShow(true);
+  };
+  const handleNotification = (e) => {
+    setBell(bell ? false : true);
   };
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -57,19 +58,22 @@ const Header = (props) => {
             <IoMdPersonAdd className="mx-1 flex jsutify-center mt-1" />
             Signup
           </button>
-
           <button
-            className="ml-3 px-3  py-3 rounded-full text-white bg-purple-900 cursor-pointer"
-            onClick={handleTheme}
+            className="px-3 py-2 cursor-pointer "
+            onClick={handleNotification}
           >
-            {themes ? <BsFillMoonFill /> : <BsFillSunFill />}
+            {bell ? (
+              <FaBell className="text-white text-2xl hover:text-yellow-400" />
+            ) : (
+              <FaBellSlash className="text-white text-2xl hover:text-yellow-400 " />
+            )}
           </button>
         </div>
       </div>
       {/* Sticky Left bar */}
       <div
         className="fixed left-0 top-1/2 
-      w-12 h-24 bg-[#dce6e8] rounded-r-xl shadow-[#333] shadow-md z-10"
+      w-12 h-24 bg-[#dce6e8] rounded-r-xl shadow-[#333] shadow-md z-20"
       >
         <img
           src={SOS}
@@ -85,10 +89,12 @@ const Header = (props) => {
       </div>
       {/* second Header */}
       <div className="w-[100vw] h-24 bg-[#37a4b9] md:bg-[#6cc2d385] fixed -bottom-7 flex justify-around items-center  md:top-14 z-40 md:h-10 md:justify-end md:space-x-8 md:pr-7 md:w-[59vw] md:right-0 md:rounded-tl-xl md:rounded-l-full md:mb-1 md:absolute">
-        <span className="w-fit h-fit mb-4 cursor-pointer flex flex-col justify-center items-center  md:mb-0  md:hover:bg-[#2f91bb] md:rounded-md md:hover:underline md:px-2 md:text-yellow-400">
-          <img src={Doctor} alt="Doctor" className="w-7 h-8 md:hidden " />
-          <h3 className="text-white text-xs mb-1 md:text-lg">Doctors</h3>
-        </span>
+        <Link to="/DoctorsList">
+          <span className="w-fit h-fit mb-4 cursor-pointer flex flex-col justify-center items-center  md:mb-0  md:hover:bg-[#2f91bb] md:rounded-md md:hover:underline md:px-2 md:text-yellow-400">
+            <img src={Doctor} alt="Doctor" className="w-7 h-8 md:hidden " />
+            <h3 className="text-white text-xs mb-1 md:text-lg">Doctors</h3>
+          </span>
+        </Link>
         <span className="w-fit h-fit mb-4 cursor-pointer flex flex-col justify-center items-center  md:mb-0  md:hover:bg-[#2f91bb] md:rounded-md md:hover:underline md:px-2 md:text-yellow-400">
           <img src={Reports} alt="Doctor" className="w-7 h-8 md:hidden" />
           <h3 className="text-white text-xs mb-1 md:text-lg">Reports</h3>
@@ -104,7 +110,15 @@ const Header = (props) => {
           </span>
         </Link>
       </div>
-      {show && <Auth toggleSignup={(show) => setShow(false)} />}
+      {
+        // Authentication
+        show && <Auth toggleSignup={(show) => setShow(false)} />
+      }
+      {
+        // Notification
+
+        bell ? null : <ApponmentBell />
+      }
     </>
   );
 };

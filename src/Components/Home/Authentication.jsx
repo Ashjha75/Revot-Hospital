@@ -1,9 +1,8 @@
 import React, { useRef, useState } from "react";
-import Med from "../Assets/Medicine-amico.png";
-import Login from "../Components/Login.jsx";
-import Signup from "../Components/Signup.jsx";
+import Med from "../../Assets/Medicine-amico.png";
+import Login from "../Home/Login.jsx";
+import Signup from "../Home/Signup.jsx";
 import { VscError } from "react-icons/vsc";
-
 const Authentication = (props) => {
   const [auth, setAuth] = useState({
     login: true,
@@ -63,7 +62,7 @@ const Authentication = (props) => {
 
             {auth.login ? <Login /> : <Signup />}
           </div>
-          <div className="justify-end h-fit mt-3 ml-10 mr-2 hidden sm:flex">
+          <div className="justify-end h-fit mt-3 ml-10 mr-2 hidden md:flex">
             <VscError
               className="text-3xl font-extrabold text-red-700  cursor-pointer "
               onClick={handleClose}
