@@ -7,7 +7,7 @@ const Card = (props) => {
   return (
     <>
       <span
-        className="w-[15rem] md:w-[22rem] mt-10 h-[22rem] md:h-[27rem] bg-white rounded-xl border-2  transform hover:-translate-y-10 duration-700 group overflow-hidden"
+        className="w-[15rem] md:w-[22rem] mt-10 mb-10 h-[22rem] md:h-[27rem] bg-white rounded-xl border-2  transform hover:-translate-y-10 duration-700 group overflow-hidden"
         data-aos="fade-right"
       >
         <img
@@ -20,7 +20,7 @@ const Card = (props) => {
           onClick={props.handleImgSrc}
         />
         <p className="absolute top-3 transform -translate-x-32 duration-500 group-hover:translate-x-0 ml-3 text-white">
-          Sneha sharma
+          {props.name}
         </p>
         <p className="absolute top-9 transform -translate-x-28 duration-500 group-hover:translate-x-0 ml-3 text-white">
           {" "}

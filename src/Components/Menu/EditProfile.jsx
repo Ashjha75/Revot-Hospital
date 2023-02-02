@@ -84,7 +84,7 @@ const EditProfile = (props) => {
             className="outline-none px-4 py-2 w-[85%] rounded-md border border-[#4ca5b7] ring-2 ring-transparent focus:ring-fuchsia-400 md:mt-7 "
             value={profileValues.Gender}
             onChange={handleInputs}
-            pattern="[A-Za-z]"
+            pattern="[A-Za-z]{4,15}"
             placeholder="Male/Female/Others"
           />
 
@@ -168,7 +168,7 @@ const EditProfile = (props) => {
             className="outline-none px-4 py-2 w-[85%] rounded-md border border-[#4ca5b7] ring-2 ring-transparent focus:ring-fuchsia-400 md:mt-7 "
             value={profileValues.Member}
             onChange={handleInputs}
-            pattern="[A-Za-z]"
+            pattern="[A-Za-z]{1,15}"
             placeholder="Active/Not Active"
           />
 
