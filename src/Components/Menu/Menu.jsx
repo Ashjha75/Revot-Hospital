@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [profileValues, setProfileValues] = useState({
-    Name: "",
-    Gender: "",
-    Address: "",
-    Zipcode: "",
-    Phone: "",
-    City: "",
-    Member: "",
+    Name: "Name",
+    Gender: "Male/Female/others",
+    Address: "New Delhi",
+    Zipcode: "12XXXX",
+    Phone: "9999XXXXXX",
+    City: "Mumbai",
+    Member: "Active/NotActive",
   });
   useEffect(() => {
     const profileValues = JSON.parse(localStorage.getItem("profileValues"));

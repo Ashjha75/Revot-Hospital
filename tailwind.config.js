@@ -26,10 +26,10 @@
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkmode: "class",
+
   theme: {
     screens: {
-      'xsm': { 'max': "300px" },
+      xsm: { max: "300px" },
       // => @media (min-width: 640px) { ... }
 
       md: "830px",
@@ -44,19 +44,14 @@ module.exports = {
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
     },
+
     extend: {
-      // backgroundcolor: {
-      //   primary: "var(--color-bg-primary)",
-      //   secondary: "var(--color-bg-secondary)",
-      // },
-      // textColor: {
-      //   accent: "var(--color-text-accent)",
-      //   primary: "var(--color-text-primary)",
-      //   secondary: "var(--color-text-secondary)",
-      // },
-      // animation: {
-      //   "waving-hand": "wave 2s linear infinite",
-      // },
+      animation: {
+        "slow-spin": "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
+      },
+      backgroundImage: {
+        "bg-img": "url('../src/Assets/bgsvg.svg')",
+      },
     },
   },
   plugins: [],

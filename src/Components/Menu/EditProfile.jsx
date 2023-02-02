@@ -22,7 +22,6 @@ const EditProfile = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.table(profileValues);
     setProfileValues(profileValues);
   };
   return (
@@ -59,7 +58,8 @@ const EditProfile = (props) => {
             htmlFor="Name"
             className="text-slate-500 md:text-xl font-semibold  md:mt-8 md:ml-10 flex gap-1"
           >
-            Name <FaTimes />
+            Name
+            {/* <FaTimes /> */}
           </label>
           <input
             type="text"
@@ -69,7 +69,7 @@ const EditProfile = (props) => {
             value={profileValues.Name}
             onChange={handleInputs}
             placeholder="Name"
-            pattern="[A-Za-z0-9]{3,10}"
+            pattern="[A-Za-z0-9\s]{3,10}"
           />
 
           <label
@@ -84,6 +84,8 @@ const EditProfile = (props) => {
             className="outline-none px-4 py-2 w-[85%] rounded-md border border-[#4ca5b7] ring-2 ring-transparent focus:ring-fuchsia-400 md:mt-7 "
             value={profileValues.Gender}
             onChange={handleInputs}
+            pattern="[A-Za-z]{4,15}"
+            placeholder="Male/Female/Others"
           />
 
           <label
@@ -151,7 +153,7 @@ const EditProfile = (props) => {
             value={profileValues.City}
             onChange={handleInputs}
             placeholder="City"
-            pattern="[A-Za-z]{3,}"
+            pattern="[A-Za-z\s]{3,}"
           />
 
           <label
@@ -166,6 +168,8 @@ const EditProfile = (props) => {
             className="outline-none px-4 py-2 w-[85%] rounded-md border border-[#4ca5b7] ring-2 ring-transparent focus:ring-fuchsia-400 md:mt-7 "
             value={profileValues.Member}
             onChange={handleInputs}
+            pattern="[A-Za-z]{1,15}"
+            placeholder="Active/Not Active"
           />
 
           <input
