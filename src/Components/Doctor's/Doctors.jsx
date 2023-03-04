@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import DoctorList from "./DoctorList";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 
 import Dr1 from "../../Assets/NewDoctor.jpeg";
 
@@ -10,7 +11,12 @@ const Doctors = () => {
     AOS.init();
   }, []);
   return (
-    <main className="bg-[#4e5c5c36] ">
+    <motion.div
+      className="bg-[#4e5c5c36] "
+      initial={{ height: 0 }}
+      animate={{ height: "100%", transition: { duration: 0.5 } }}
+      exit={{ y: window.innerHeight }}
+    >
       <div className="bg-[#036c5f] flex flex-col md:flex-row justify-around items-center w-screen h-fit  pb-20 z-0">
         <div
           className="md:w-[60%] w-[94%] pl-5 pt-32 md:pt-64 md:pl-24"
@@ -31,12 +37,15 @@ const Doctors = () => {
             always try to give better tommorrow to our patients .
           </p>
           <span className="flex flex-col md:flex-row gap-10 justify-center items-center max-w-xl py-7">
-            <button
-              type="submit"
-              className=" text-[#333] bg-[#eea676]  px-7 py-3  rounded-3xl transform hover:scale-105 duration-500 hover:shadow-lg border-2 shadow-md"
-            >
-              Book An Appoinment
-            </button>
+            <a href="#Drs">
+              {" "}
+              <button
+                type="submit"
+                className=" text-[#333] bg-[#eea676]  px-7 py-3  rounded-3xl transform hover:scale-105 duration-500 hover:shadow-lg border-2 shadow-md"
+              >
+                Book An Appoinment
+              </button>
+            </a>
             <button
               type="submit"
               className="bg-transparent px-5 py-3 border-4 text-white border-double rounded-3xl shadow-md hover:border-[#9e9b9b] hover:scale-95 duration-500 w-fit"
@@ -63,9 +72,9 @@ const Doctors = () => {
           </span>
         </div>
       </div>
-
+      <div id="Drs"></div>
       <DoctorList />
-    </main>
+    </motion.div>
   );
 };
 

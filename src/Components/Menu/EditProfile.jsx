@@ -8,6 +8,7 @@ const EditProfile = (props) => {
     Address: "",
     Zipcode: "",
     Phone: "",
+    Email: "",
     City: "",
     Member: "",
   });
@@ -136,6 +137,23 @@ const EditProfile = (props) => {
             onChange={handleInputs}
             placeholder="Phone"
             pattern="[0-9]{0,10}"
+            max={10}
+          />
+          <label
+            htmlFor="Email"
+            className="text-slate-500 md:text-xl font-semibold  md:mt-8  md:ml-10"
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            name="Email"
+            id="Email"
+            className="outline-none px-4 py-2 w-[85%] rounded-md border border-[#4ca5b7] ring-2 ring-transparent focus:ring-fuchsia-400 md:mt-7  invalid:focus:ring-red-500 "
+            value={profileValues.Email}
+            onChange={handleInputs}
+            placeholder="XYZ@gmail.com"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             max={10}
           />
 

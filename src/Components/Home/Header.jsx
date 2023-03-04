@@ -89,20 +89,25 @@ const Header = (props) => {
       </div>
       {/* second Header */}
       <div className="w-[100vw] h-24 bg-[#37a4b9] md:bg-[#6cc2d385] fixed -bottom-7 flex justify-around items-center  md:top-14 z-40 md:h-10 md:justify-end md:space-x-8 md:pr-7 md:w-[59vw] md:right-0 md:rounded-tl-xl md:rounded-l-full md:mb-1 md:absolute">
+        <Link to="/">
+          <span className="w-fit h-fit mb-4 cursor-pointer flex flex-col justify-center items-center  md:mb-0  md:hover:bg-[#2f91bb] md:rounded-md md:hover:underline md:px-2 md:text-yellow-400">
+            <img src={Appoint} alt="Doctor" className="w-7 h-8 md:hidden" />
+            <h3 className="text-white text-xs mb-1 md:text-lg">Home</h3>
+          </span>
+        </Link>
         <Link to="/DoctorsList">
           <span className="w-fit h-fit mb-4 cursor-pointer flex flex-col justify-center items-center  md:mb-0  md:hover:bg-[#2f91bb] md:rounded-md md:hover:underline md:px-2 md:text-yellow-400">
             <img src={Doctor} alt="Doctor" className="w-7 h-8 md:hidden " />
             <h3 className="text-white text-xs mb-1 md:text-lg">Doctors</h3>
           </span>
         </Link>
-        <span className="w-fit h-fit mb-4 cursor-pointer flex flex-col justify-center items-center  md:mb-0  md:hover:bg-[#2f91bb] md:rounded-md md:hover:underline md:px-2 md:text-yellow-400">
-          <img src={Reports} alt="Doctor" className="w-7 h-8 md:hidden" />
-          <h3 className="text-white text-xs mb-1 md:text-lg">Reports</h3>
-        </span>
-        <span className="w-fit h-fit mb-4 cursor-pointer flex flex-col justify-center items-center  md:mb-0  md:hover:bg-[#2f91bb] md:rounded-md md:hover:underline md:px-2 md:text-yellow-400">
-          <img src={Appoint} alt="Doctor" className="w-7 h-8 md:hidden" />
-          <h3 className="text-white text-xs mb-1 md:text-lg">Appointments</h3>
-        </span>
+        <Link to="/Reports">
+          <span className="w-fit h-fit mb-4 cursor-pointer flex flex-col justify-center items-center  md:mb-0  md:hover:bg-[#2f91bb] md:rounded-md md:hover:underline md:px-2 md:text-yellow-400">
+            <img src={Reports} alt="Doctor" className="w-7 h-8 md:hidden" />
+            <h3 className="text-white text-xs mb-1 md:text-lg">Reports</h3>
+          </span>
+        </Link>
+
         <Link to="/Menu">
           <span className="w-fit h-fit mb-4 cursor-pointer flex flex-col justify-center items-center  md:mb-0  md:hover:bg-[#2f91bb] md:rounded-md md:hover:underline md:px-2 md:text-yellow-400">
             <GiHamburgerMenu className="fill-white w-7 h-8 md:hidden" />
