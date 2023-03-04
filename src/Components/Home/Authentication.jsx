@@ -23,7 +23,7 @@ const Authentication = (props) => {
   };
   return (
     <div onClick={handleClose} className="overflow-y-hidden">
-      <div className="flex justify-center items-center bg-[#102753b8] w-[100%] h-[100vh] pt-12 ">
+      <div className="flex justify-center items-center bg-[#102753b8] w-[100vw] h-[100vh]  ">
         <div
           className="bg-[#e1d9d9] w-[92%] md:w-[60%]   rounded-xl border-4 border-[#63e6f2] flex overflow-hidden  "
           ref={contents}
@@ -34,7 +34,6 @@ const Authentication = (props) => {
               Get Flat 10% off on <br /> Medicines
             </p>
           </div>
-
           <div className="flex flex-col">
             <div className="flex gap-x-12 md:gap-x-28 mt-3 ml-5 font-semibold text-xl text-gray-700 h-fit pb-5">
               {" "}

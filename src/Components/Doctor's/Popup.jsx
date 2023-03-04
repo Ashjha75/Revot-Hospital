@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Popup = (props) => {
   const handleClose = useRef(null);
@@ -43,7 +44,7 @@ const Popup = (props) => {
                   </tr>
                   <tr>
                     <td>Speciality-</td>
-                    <td className="pl-5">Obstetrician</td>
+                    <td className="pl-5">{props.imagesa[4]}</td>
                   </tr>
                   <tr>
                     <td>Experience-</td>
@@ -51,9 +52,20 @@ const Popup = (props) => {
                   </tr>
                 </tbody>
               </table>
-              <button className="bg-[#df8447] text-white px-5 py-3 my-10 ml-5 rounded-xl border-2 transform translate duration-300 shadow-xl hover:scale-110 hover:shadow-sm">
-                Book Appinment
-              </button>
+              <Link
+                to="/Appoinments"
+                state={[
+                  props.imagesa[0],
+                  props.imagesa[1],
+                  props.imagesa[2],
+                  props.imagesa[3],
+                  props.imagesa[4],
+                ]}
+              >
+                <button className="bg-[#df8447] text-white px-5 py-3 my-10 ml-5 rounded-xl border-2 transform translate duration-300 shadow-xl hover:scale-110 hover:shadow-sm">
+                  Book Appinment
+                </button>
+              </Link>
             </div>
           </div>
         </section>

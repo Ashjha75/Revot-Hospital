@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Contact from "../Home/Contact.jsx";
@@ -68,7 +70,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-[#f8f8f8] w-[100%] h-[100%] z-0 flex flex-col">
+    <motion.div
+      className="bg-[#f8f8f8] w-[100%] h-[100%] z-0 flex flex-col"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       {/* 1st row */}
       <div className="flex flex-col md:flex-row justify-around ">
         <div className="pt-16 md:pt-24 " data-aos="fade-left">
@@ -107,12 +114,14 @@ const Home = () => {
                   onChange={handleLoc}
                 />
               </span>
-              <button
-                type="submit"
-                className="bg-[#003a70] text-white text-lg rounded-lg py-3 w-[80%] ml-5 hover:bg-[#06447e]"
-              >
-                Book Appoinment
-              </button>
+              <Link to="/DoctorsList">
+                <button
+                  type="submit"
+                  className="bg-[#003a70] text-white text-lg rounded-lg py-3 w-[80%] ml-5 hover:bg-[#06447e]"
+                >
+                  Doctors
+                </button>
+              </Link>
             </form>
           </div>
         </div>
@@ -500,15 +509,9 @@ const Home = () => {
           </h5>
           <p className="mb-3 text-[#0f1551]">11 Yrs Experience</p>
         </div>
-        {/* <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div> */}
       </div>
       <Contact></Contact>
-    </div>
+    </motion.div>
   );
 };
 
